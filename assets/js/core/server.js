@@ -16,7 +16,7 @@ var server = function() {
     var register = function(obj, done, fail) {
         // Create a new user
         return $.ajax({
-            url: APIurl + 'Users',
+            url: APIurl + 'Consumer',
             type: 'POST',
             timeout: 0,
             headers: { "Content-Type": "application/json" },
@@ -27,7 +27,7 @@ var server = function() {
     var getUser = function(id, done, fail) {
         // Get user by id
         return $.ajax({
-            url: APIurl + 'Users/' + id,
+            url: APIurl + 'Consumer' + id,
             type: 'GET',
             timeout: 0,
             headers: { "Content-Type": "application/json", "Authorization": addToken() },

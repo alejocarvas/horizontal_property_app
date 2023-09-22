@@ -1,18 +1,3 @@
-<!--
-=========================================================
-* Soft UI Dashboard - v1.0.3
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,37 +45,38 @@
               <h5>Registrate en PropertyApp</h5>
             </div>
             <div class="card-body">
-              <form role="form text-left" autocomplete="off" novalidate>
+              <form id= 'registerForm' role="form" autocomplete="off" novalidate>
                 <div class="mb-3">
-                  <label for="name">Nombre *</label>
-                  <input type="text" class="form-control" id="name" placeholder="Pepito Perez" aria-label="Nombre" aria-describedby="name-addon" autocomplete="off">
+                  <label>Nombre y Apellido*</label>
+                  <input name="Name" type="name" class="form-control" placeholder="Pepito Perez" aria-label="Nombre" aria-describedby="name-addon" autocomplete="off" required>
                 </div>
                 <div class="mb-3">
                   <div class="form-group">
-                    <label for="type">Tipo de documento *</label>
-                    <select class="form-control" id="type">
+                    <label>Tipo de documento *</label>
+                    <select id="identificationType" name= "IdentificationType" class="form-control" required>
                       <option selected="">Selecciona una opción</option>
                       <option value="1">Cédula de ciudadanía</option>
-                      <option value="2">Cédula de extrangería</option>
+                      <option value="2">Tarjeta de identidad</option>
                       <option value="3">Pasaporte</option>
+                      <option value="4">Cédula de extranjería</option>
                     </select>
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="dni">Número de documento *</label>
-                  <input type="text" class="form-control" id="dni" placeholder="1098778995" aria-label="dni" aria-describedby="dni-addon" autocomplete="off" required>
+                  <label>Número de documento *</label>
+                  <input name= "Identification" type="identification" class="form-control" placeholder="1098778995" aria-label="Identification" aria-describedby="dni-addon" autocomplete="off" required>
                 </div>
                 <div class="mb-3">
-                  <label for="email">Email *</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email" aria-label="Email" aria-describedby="email-addon" autocomplete="off" required>
+                  <label>Email *</label>
+                  <input name="Email" type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" autocomplete="off" required>
                 </div>
                 <div class="mb-3">
-                  <label for="password">Contraseña *</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password" aria-label="Password" aria-describedby="password-addon" autocomplete="new-password" required>
+                  <label>Contraseña *</label>
+                  <input name="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon" autocomplete="new-password" required>
                 </div>
                 <div class="mb-3">
-                  <label for="cellphone">Celular *</label>
-                  <input type="tel" class="form-control" id="cellphone" placeholder="3184758911" aria-label="Cellphone" aria-describedby="email-addon" autocomplete="off" required>
+                  <label>Celular *</label>
+                  <input name="Cellphone" type="cellphone" class="form-control" placeholder="3184758911" aria-label="Cellphone" aria-describedby="email-addon" autocomplete="off" required>
                 </div>
                 <div class="form-check form-check-info text-left">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
@@ -99,7 +85,7 @@
                   </label>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0">Registrarme</button>
+                  <a href="javascript:controller.register('registerForm')" class="btn bg-gradient-info w-100 mt-4 mb-0">Registrarme</a>
                 </div>
                 <p class="text-sm mt-3 mb-0">Ya tienes tu cuenta en PropertyApp? <a href="sign-in.html" class="text-dark font-weight-bolder">Ingresa aquí</a></p>
               </form>
@@ -161,6 +147,11 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/bootstrap-notify.js"></script>
+  <script src="../assets/js/core/common.js"></script>
+  <script src="../assets/js/core/server.js"></script>
+  <script src="../assets/js/pages/sign-up.js"></script>
 </body>
 
 </html>

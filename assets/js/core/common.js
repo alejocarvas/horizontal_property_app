@@ -121,19 +121,6 @@ function validForm(formId) {
             }
         }
     });
-    $("form#" + formId + " select").each(function() {
-        var input = $(this)[0];
-        if (input.required) {
-            if (input.value == '') {
-                if (!input.classList.contains("invalid")) {
-                    input.className += " invalid";
-                }
-                res = false;
-            } else {
-                input.className = input.className.replace(" invalid", "")
-            }
-        }
-    });
     $("form#" + formId + " textarea").each(function() {
         var input = $(this)[0];
         if (input.required) {
