@@ -10,10 +10,10 @@ var controller = function(server) {
             consumer.Password = btoa(consumer.Password);
             // Call API
             server.register(consumer, function(resp) {
+                showNotificationSuccess('Le enviamos un correo electrónico al correo registrado para activar su cuenta en PropertyApp.');
                 setTimeout(function() {
-                    showNotificationSuccess('Le enviamos un correo electrónico al correo registrado para activar su cuenta en PropertyApp.');
                     redirect("sign-in.html");
-                  }, 3000);
+                }, 3000);
             }, function(err) {
                 showNotificationError('Se presentó un error al intentar hacer el registro.');
                 console.log(err.responseText);
